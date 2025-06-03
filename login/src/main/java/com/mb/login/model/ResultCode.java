@@ -1,4 +1,4 @@
-package com.mb.msgboards.model;
+package com.mb.login.model;
 
 import lombok.Data;
 

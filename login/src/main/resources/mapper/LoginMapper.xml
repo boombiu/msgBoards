@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mb.msgboards.mapper.LoginMapper">
-    <insert id="insert" parameterType="com.mb.msgboards.model.Login">
+    <insert id="insert" parameterType="com.mb.login.model.Login">
         INSERT INTO login (user_id, opration, opr_time, opr_ip)
         VALUES (#{userId}, #{opration}, #{oprTime}, #{oprIp})
     </insert>

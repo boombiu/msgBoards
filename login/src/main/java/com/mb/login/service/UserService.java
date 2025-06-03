@@ -1,7 +1,7 @@
-package com.mb.msgboards.service;
+package com.mb.login.service;
 
-import com.mb.msgboards.model.ResultCode;
-import com.mb.msgboards.model.User;
+import com.mb.login.model.ResultCode;
+import com.mb.login.model.User;
 
 public interface UserService {
     public ResultCode login(User user);

@@ -1,11 +1,11 @@
-package com.mb.msgboards.service.impl;
+package com.mb.login.service.impl;
 
-import com.mb.msgboards.mapper.LoginMapper;
-import com.mb.msgboards.mapper.UserMapper;
-import com.mb.msgboards.model.Login;
-import com.mb.msgboards.model.ResultCode;
-import com.mb.msgboards.model.User;
-import com.mb.msgboards.service.UserService;
+import com.mb.login.mapper.LoginMapper;
+import com.mb.login.mapper.UserMapper;
+import com.mb.login.model.Login;
+import com.mb.login.model.ResultCode;
+import com.mb.login.model.User;
+import com.mb.login.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,7 @@
-package com.mb.msgboards.mapper;
+package com.mb.login.mapper;
 
-import com.mb.msgboards.model.Login;
+import com.mb.login.model.Login;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface LoginMapper {

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mb.msgboard.mapper.MessageMapper">
+    
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        message_id, user_id, title, content, status, view_count, like_count, comment_count, created_at, updated_at
+    </sql>
+    
+    <!-- 分页查询留言列表 -->
+    <select id="selectMessagePage" resultType="com.mb.msgboard.entity.Message">
+        SELECT 
+            m.*,
+            u.username as authorName,
+            u.avatar as authorAvatar
+        FROM messages m
+        LEFT JOIN user u ON m.user_id = u.user_id
+        WHERE m.status = 1
+        <if test="keyword != null and keyword != ''">
+            AND (m.title LIKE CONCAT('%', #{keyword}, '%')
+            OR m.content LIKE CONCAT('%', #{keyword}, '%'))
+        </if>
+        ORDER BY m.created_at DESC
+    </select>
+    
+    <!-- 更新浏览次数 -->
+    <update id="updateViewCount">
+        UPDATE messages
+        SET view_count = view_count + 1
+        WHERE message_id = #{messageId}
+    </update>
+    
+    <!-- 更新点赞次数 -->
+    <update id="updateLikeCount">
+        UPDATE messages
+        SET like_count = like_count + #{increment}
+        WHERE message_id = #{messageId}
+    </update>
+    
+    <!-- 更新评论次数 -->
+    <update id="updateCommentCount">
+        UPDATE messages
+        SET comment_count = comment_count + #{increment}
+        WHERE message_id = #{messageId}
+    </update>
+    
+</mapper> 

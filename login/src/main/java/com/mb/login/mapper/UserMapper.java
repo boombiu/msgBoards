@@ -1,6 +1,6 @@
-package com.mb.msgboards.mapper;
+package com.mb.login.mapper;
 
-import com.mb.msgboards.model.User;
+import com.mb.login.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

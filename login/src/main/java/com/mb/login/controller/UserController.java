@@ -1,8 +1,8 @@
-package com.mb.msgboards.controller;
+package com.mb.login.controller;
 
-import com.mb.msgboards.model.ResultCode;
-import com.mb.msgboards.model.User;
-import com.mb.msgboards.service.UserService;
+import com.mb.login.model.ResultCode;
+import com.mb.login.model.User;
+import com.mb.login.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
